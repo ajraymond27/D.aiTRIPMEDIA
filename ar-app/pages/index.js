@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { Canvas } from "@react-three/fiber";
 import css from "../styles/Home.module.css";
 import LightBulb from "../components/LightBulb";
