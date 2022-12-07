@@ -6,6 +6,7 @@ import Draggable from "../components/Draggable";
 import Floor from "../components/Floor";
 import Box from "../components/Box";
 import {Suspense} from "react";
+import { Plane } from "three";
 
 
 export default function Home() {
@@ -21,11 +22,13 @@ export default function Home() {
           <ambientLight color={"white"} intensity={0.2} />
           <LightBulb position={[0, 3, 0]} />
           <Draggable>
-          <Suspense fallback={null}>
-              <Box rotateX={3} rotateY={0.2} />
-          </Suspense>
+            <Suspense fallback={null}>
+                <Box rotateX={3} rotateY={0.2} />
+            </Suspense>
           </Draggable>
           <OrbitControls/>
+
+          
           <Floor position={[0, -1, 0]} />
       </Canvas>
     </div>
