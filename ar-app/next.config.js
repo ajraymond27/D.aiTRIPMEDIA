@@ -17,6 +17,9 @@ rewrites: async () => [
 
     source: "/public/crown.html",
     destination: "/pages/api/pages.js",
+
+    source: "/public/cutting_board.html",
+    destination: "/pages/api/pages.js",
   },
 ],
 
