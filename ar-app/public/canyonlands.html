@@ -5,13 +5,20 @@
     <title>360&deg; Image</title>
     <meta name="description" content="360&deg; Image - A-Frame">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/western" rel="stylesheet">
   </head>
   <body>
     <a-scene>
-      <a-sky src="https://d13wrvtzk1buxr.cloudfront.net/360_images/canyonlands.JPG" rotation="0 0 0"></a-sky>
+      <a-assets>
+        <img id="my-image" src="https://d13wrvtzk1buxr.cloudfront.net/imgs/canyonlands/canyon1.JPG">
+      </a-assets>
+      <!-- <a-sky src="https://d13wrvtzk1buxr.cloudfront.net/360_images/canyonlands.JPG" rotation="0 0 0"></a-sky> -->
+      <a-sky src="canyonlands.JPG" rotation="0 90 0"></a-sky>
+      <!-- tree -->
+      <a-image src="#my-image" position="10 3.2 10" width="20" height="30" rotation="0 0 0"></a-image>
 
-      <a-text font="kelsonsans" value="canyonlands" width="6" position="-1 1 -1.5"
-        rotation="0 15 0"></a-text>
+      <a-text font="exo2bold" value="Canyonlands" width="10" position="-1.75 1 -2" rotation="0 0 0"></a-text>
+      <a-text font="exo2bold" value="National Park" width="5" position="-1.1 .5 -2" rotation="0 0 0"></a-text>
     </a-scene>
   </body>
 </html>
