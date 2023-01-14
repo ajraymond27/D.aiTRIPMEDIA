@@ -20,6 +20,9 @@ rewrites: async () => [
 
     source: "/public/cutting_board.html",
     destination: "/pages/api/pages.js",
+
+    source: "/public/test.html",
+    destination: "/pages/api/pages.js",
   },
 ],
 

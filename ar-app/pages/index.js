@@ -21,11 +21,9 @@ export default function Home() {
       >
           <ambientLight color={"white"} intensity={0.2} />
           <LightBulb position={[0, 3, 0]} />
-          <Draggable>
             <Suspense fallback={null}>
                 <Box rotateX={3} rotateY={0.2} />
             </Suspense>
-          </Draggable>
           <OrbitControls/>
 
           
