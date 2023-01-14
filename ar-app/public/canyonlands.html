@@ -12,26 +12,20 @@
       environment
       cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable">
       <a-assets>
-        <!-- <img id="my-image" src="https://d13wrvtzk1buxr.cloudfront.net/imgs/canyonlands/canyon1.JPG"> -->
-        <!-- <img id="my-image" src="kendrick.png"> -->
-
-        <!--Image source: http://www.ghibli.jp/works/kazetachinu/#frame&gid=1&pid=1
-          Image author: Studio Ghibli
-        -->
-        <img id="kazetachinu" src="texture.jpg" crossorigin="anonymous"/>
-        <img id="kazetachinuPoster" src="kendrick.png" crossorigin="anonymous"/>
+        <img id="canyon1" src="https://d13wrvtzk1buxr.cloudfront.net/imgs/canyonlands/canyon1" crossorigin="anonymous"/>
+        <img id="canyon1Poster" src="https://d13wrvtzk1buxr.cloudfront.net/imgs/canyonlands/canyon1" crossorigin="anonymous"/>
         <!--
-          Image source: http://www.ghibli.jp/works/ponyo/#frame&gid=1&pid=36
+          Image source: http://www.ghibli.jp/works/canyon2/#frame&gid=1&pid=36
           Image author: Studio Ghibli
         -->
-        <img id="ponyo" src="kendrick.png" crossorigin="anonymous"/>
-        <img id="ponyoPoster" src="texture.jpg" crossorigin="anonymous"/>
+        <img id="canyon2" src="https://d13wrvtzk1buxr.cloudfront.net/imgs/canyonlands/canyon2" crossorigin="anonymous"/>
+        <img id="canyon2Poster" src="https://d13wrvtzk1buxr.cloudfront.net/imgs/canyonlands/canyon2" crossorigin="anonymous"/>
         <!--
-          Image source: http://www.ghibli.jp/works/karigurashi/#frame&gid=1&pid=32
+          Image source: http://www.ghibli.jp/works/canyon3/#frame&gid=1&pid=32
           Image author: Studio Ghibli
         -->
-        <img id="karigurashi" src="https://cdn.aframe.io/examples/ui/karigurashi.jpg" crossorigin="anonymous"/>
-        <img id="karigurashiPoster" src="https://cdn.aframe.io/examples/ui/karigurashiPoster.jpg" crossorigin="anonymous"/>
+        <img id="canyon3" src="https://d13wrvtzk1buxr.cloudfront.net/imgs/canyonlands/canyon3" crossorigin="anonymous"/>
+        <img id="canyon3Poster" src="https://d13wrvtzk1buxr.cloudfront.net/imgs/canyonlands/canyon3" crossorigin="anonymous"/>
         <a-mixin
           id="frame"
           geometry="primitive: plane; width: 0.5783552; height: 0.8192"
@@ -49,14 +43,14 @@
         <a-mixin
           id="movieImage"
           geometry="primitive: plane; width: 1.5; height: 0.81"
-          material="src: #ponyo; shader: flat; transparent: true"
+          material="src: #canyon2; shader: flat; transparent: true"
           position="0 0.495 0.002"
         ></a-mixin>
 
       </a-assets>
 
-      <!-- <a-sky src="https://d13wrvtzk1buxr.cloudfront.net/360_images/canyonlands.JPG" rotation="0 0 0"></a-sky> -->
-      <a-sky src="canyonlands_test/canyonlands.JPG" rotation="0 90 0"></a-sky>
+      <a-sky src="https://d13wrvtzk1buxr.cloudfront.net/360_images/canyonlands.JPG" rotation="0 0 0"></a-sky>
+      <!-- <a-sky src="canyonlands_test/canyonlands.JPG" rotation="0 90 0"></a-sky> -->
       <!-- tree -->
       <a-text font="exo2bold" value="Canyonlands" width="10" position="-1.75 1 -2" rotation="0 0 0"></a-text>
       <a-text font="exo2bold" value="National Park" width="5" position="-1.1 .5 -2" rotation="0 0 0"></a-text>
@@ -78,16 +72,16 @@
       <a-entity id="ui" position="0 2 1.5" rotation="0 180 0">
         <!-- Poster menu -->
         <a-entity id="menu" highlight>
-          <a-entity id="karigurashiButton" position="-0.8 0 0" mixin="frame" class="raycastable menu-button">
-            <a-entity material="src: #karigurashiPoster;" mixin="poster"></a-entity>
+          <a-entity id="canyon3Button" position="-0.8 0 0" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #canyon3Poster;" mixin="poster"></a-entity>
           </a-entity>
 
-          <a-entity id="kazetachinuButton" position="0 0 0" mixin="frame" class="raycastable menu-button">
-            <a-entity material="src: #kazetachinuPoster" mixin="poster"></a-entity>
+          <a-entity id="canyon1Button" position="0 0 0" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #canyon1Poster" mixin="poster"></a-entity>
           </a-entity>
 
-          <a-entity id="ponyoButton" position="0.8 0 0" mixin="frame" class="raycastable menu-button">
-            <a-entity material="src: #ponyoPoster" mixin="poster"></a-entity>
+          <a-entity id="canyon2Button" position="0.8 0 0" mixin="frame" class="raycastable menu-button">
+            <a-entity material="src: #canyon2Poster" mixin="poster"></a-entity>
           </a-entity>
         </a-entity>
 
@@ -100,12 +94,12 @@
           scale="0.001 0.001 0.001"
           geometry="primitive: plane; width: 1.5; height: 1.8"
           material="color: #333333; shader: flat; transparent: false" class="raycastable">
-          <a-entity id="ponyoMovieImage" mixin="movieImage" material="src: #ponyo" visible="false"></a-entity>
-          <a-entity id="kazetachinuMovieImage" mixin="movieImage" material="src: #kazetachinu" visible="false"></a-entity>
-          <a-entity id="karigurashiMovieImage" mixin="movieImage" material="src: #karigurashi" visible="false"></a-entity>
+          <a-entity id="canyon2MovieImage" mixin="movieImage" material="src: #canyon2" visible="false"></a-entity>
+          <a-entity id="canyon1MovieImage" mixin="movieImage" material="src: #canyon1" visible="false"></a-entity>
+          <a-entity id="canyon3MovieImage" mixin="movieImage" material="src: #canyon3" visible="false"></a-entity>
           <a-entity id="movieTitle"
             position="-0.68 -0.1 0"
-            text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Ponyo (2003)"></a-entity>
+            text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: canyon2 (2003)"></a-entity>
           <a-entity id="movieDescription"
             position="-0.68 -0.2 0"
             text="baseline: top; shader: msdf; anchor: left; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."></a-entity>
