@@ -12,6 +12,8 @@
       environment
       cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable">
       <a-assets>
+        <img id="my-image" src="canyonlands_test/nps.png">
+
         <img id="canyon1" src="https://d13wrvtzk1buxr.cloudfront.net/imgs/canyonlands/canyon1.JPG" crossorigin="anonymous"/>
         <img id="canyon1Poster" src="https://d13wrvtzk1buxr.cloudfront.net/imgs/canyonlands/canyon1.JPG" crossorigin="anonymous"/>
         <!--
@@ -49,11 +51,12 @@
 
       </a-assets>
 
-      <!-- <a-sky src="https://d13wrvtzk1buxr.cloudfront.net/360_images/canyonlands.JPG" rotation="0 90 0"></a-sky> -->
-      <a-sky src="canyonlands_test/canyonlands.JPG" rotation="0 90 0"></a-sky>
-      <a-box material="side: double; color: #000; transparent: true; opacity: 0.75" depth=".1" height="1.5" width="5" position="-1 0 -2.75"></a-box>
-      <a-text font="exo2bold" value="Canyonlands" width="10" position="-1.75 .75 -2" rotation="0 0 0"></a-text>
-      <a-text font="exo2bold" value="National Park" width="5" position="-1.1 .25 -2" rotation="0 0 0"></a-text>
+      <a-sky src="https://d13wrvtzk1buxr.cloudfront.net/360_images/canyonlands.JPG" rotation="0 90 0"></a-sky>
+      <!-- <a-sky src="canyonlands_test/canyonlands.JPG" rotation="0 90 0"></a-sky> -->
+      <a-box material="side: double; color: #000; transparent: true; opacity: 0.75" depth=".1" height="1.25" width="10" position="0 0 -2.75"></a-box>
+      <a-text font="exo2bold" value="Canyonlands" width="12" position="-1 .75 -2" rotation="0 0 0"></a-text>
+      <a-text font="exo2bold" value="National Park" width="6" position="-1 .25 -2" rotation="0 0 0"></a-text>
+      <a-image src="#my-image" position="-1.5 .45 -2" width=".5" height=".75" rotation="0 0 0"></a-image>
 
       <a-entity
         position="0 1.6 0"
