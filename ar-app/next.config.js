@@ -23,6 +23,9 @@ rewrites: async () => [
 
     source: "/public/test.html",
     destination: "/pages/api/pages.js",
+
+    source: "/public/dancing_bears.html",
+    destination: "/pages/api/pages.js",
   },
 ],
 

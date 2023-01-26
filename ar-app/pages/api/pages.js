@@ -1,5 +1,5 @@
 import fs from "fs";
-const filenames = ["/alien.html", "/medicine_bow.html", "/canyonlands.html", "/crown.html", "/cutting_board.html", "test.html"];
+const filenames = ["/alien.html", "/medicine_bow.html", "/canyonlands.html", "/crown.html", "/cutting_board.html", "test.html", "dancing_bears.html"];
 
 export default async function api(req, res) {
   res.setHeader("Content-Type", "text/html; charset=utf-8");
