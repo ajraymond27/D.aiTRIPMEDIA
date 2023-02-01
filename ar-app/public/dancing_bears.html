@@ -2,16 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>360&deg; Image</title>
+    <title>Dancing Bears</title>
     <meta name="description" content="360&deg; Image - A-Frame">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-sky src="grateful_dead.png" rotation="0 0 0"></a-sky>
+        <a-assets>
+            <audio id="dead" src="sound.mp3"></audio>
+        </a-assets>
+        <a-sky src="grateful_dead.png" rotation="0 -90 0"></a-sky>
 
-      <a-text font="mozillavr" value="Grateful Dead" width="10" position="-1.5 1.5 -1.5"
-        rotation="0 0 0"></a-text>
+        <a-text font="mozillavr" value="Grateful Dead" width="10" position="-1.5 1.5 -1.5"
+            rotation="0 0 0"></a-text>
+        <!-- <a-cylinder color="#FFF" height="5" position="-2 2.5 0" >
+            <a-entity sound="src: #dead; on: click"></a-entity>
+        </a-cylinder> -->
     </a-scene>
   </body>
 </html>
