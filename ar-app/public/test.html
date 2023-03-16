@@ -7,12 +7,12 @@
   <a-scene>
     <a-assets>
       <video id="video" crossorigin="anonymous" playsinline webkit-playsinline loop>
-        <source src="https://path/to/video.mp4" type="video/mp4">
+        <source src="https://d13wrvtzk1buxr.cloudfront.net/360_video/bow.MP4" type="video/mp4">
       </video>
     </a-assets>
-    <a-videosphere src="https://d13wrvtzk1buxr.cloudfront.net/360_video/bow.MP4"></a-videosphere>
+    <a-videosphere src="#video"></a-videosphere>
     <a-entity camera>
-      <a-camera look-controls></a-camera>
+        <a-camera look-controls></a-camera>
     </a-entity>
   </a-scene>
   <script>
