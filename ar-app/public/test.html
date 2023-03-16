@@ -1,19 +1,101 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Canyonlands National Park</title>
-    <meta name="description" content="360&deg; Image - A-Frame">
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <link href="https://fonts.cdnfonts.com/css/western" rel="stylesheet">
-  </head>
-  <body>
-    <a-scene>
-      <!-- <a-sky src="https://d13wrvtzk1buxr.cloudfront.net/360_images/canyonlands.JPG" rotation="0 90 0"></a-sky> -->
-      <a-sky src="canyonlands_test/canyonlands.JPG" rotation="0 90 0"></a-sky>
-      <a-box material="side: double; color: #000; transparent: true; opacity: 0.75" depth=".1" height="1.5" width="10" position="-1 0 -2.75"></a-box>
-      <a-text font="exo2bold" value="Canyonlands" width="10" position="-1.75 .75 -2" rotation="0 0 0"></a-text>
-      <a-text font="exo2bold" value="National Park" width="5" position="-1.1 .25 -2" rotation="0 0 0"></a-text>
-    </a-scene>
-  </body>
+<head>
+	<title>Three.js Equirectangular Video Texture Demo with Toggle Button and Orbit Controls</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			height: 100vh;
+		}
+		canvas {
+			display: block;
+		}
+		#toggle-button {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			padding: 10px;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: white;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="toggle-button">Play</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.131.1/examples/js/controls/OrbitControls.js"></script>
+	<script>
+		// create a scene
+		var scene = new THREE.Scene();
+
+		// create a camera
+		var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+		camera.position.z = 0.01;
+
+		// create a renderer
+		var renderer = new THREE.WebGLRenderer();
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		document.body.appendChild(renderer.domElement);
+
+		// create a video element
+		var video = document.createElement('video');
+		video.src = 'https://d13wrvtzk1buxr.cloudfront.net/360_video/bow.mp4';
+		video.autoplay = true;
+		video.loop = true;
+		video.muted = true;
+		video.style.display = 'none';
+		document.body.appendChild(video);
+
+		// create a video texture
+		var texture = new THREE.VideoTexture(video);
+		texture.minFilter = THREE.LinearFilter;
+		texture.magFilter = THREE.LinearFilter;
+		texture.format = THREE.RGBFormat;
+
+		// create a sphere geometry
+		var geometry = new THREE.SphereGeometry(10, 60, 40);
+
+		// invert the geometry so that it is inside out
+		geometry.scale(-1, 1, 1);
+
+		// create a material with the video texture
+		var material = new THREE.MeshBasicMaterial({ map: texture });
+
+		// create a mesh with the sphere geometry and material
+		var mesh = new THREE.Mesh(geometry, material);
+
+		// add the mesh to the scene
+		scene.add(mesh);
+
+		// create orbit controls
+		var controls = new THREE.OrbitControls(camera, renderer.domElement);
+		controls.enableDamping = true;
+		controls.dampingFactor = 0.05;
+		controls.autoRotate = true;
+		controls.autoRotateSpeed = -1.0;
+
+		// add event listener for toggle button click
+		var toggleButton = document.getElementById('toggle-button');
+		toggleButton.addEventListener('click', function() {
+		  if (video.paused) {
+		    video.play();
+		    toggleButton.innerText = 'Pause';
+		  } else {
+		    video.pause();
+		    toggleButton.innerText = 'Play';
+		  }
+		});
+
+		// render the scene
+		function animate() {
+		  requestAnimationFrame(animate);
+		  controls.update();
+		  renderer.render(scene, camera);
+		}
+		animate();
+	</script>
+</body>
 </html>
