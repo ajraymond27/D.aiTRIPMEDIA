@@ -9,12 +9,11 @@
   <body>
     <a-scene>
         <a-assets>
-            <img id="floorTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
-            <img id="gridTexture" src="kendrick.png">
+            <img id="floorTexture" src="glass.jpg">
         </a-assets>
 
         <a-sky src="grateful_dead.png" rotation="0 -90 0"></a-sky>
-        <a-plane src="#floorTexture" rotation="-90 0 0" height="50" width="50"></a-plane>
+        <a-plane src="#floorTexture" rotation="-90 0 0" height="50" width="50" material="shader: standard; transparent: true; opacity: 0.5; metalness: 0; roughness: 0; color: #fff"></a-plane>
 
         <!-- Front -->
         <a-entity position="0 1.5 -5">
