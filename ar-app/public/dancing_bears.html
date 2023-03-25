@@ -8,7 +8,7 @@
   <body>
     <a-scene>
       <a-assets>
-        <audio id="music" src="sound.mp3" autoplay></audio>
+        <audio id="music" src="sound.mp3"></audio>
       </a-assets>
     
       <a-entity position="0 1.6 -4">
@@ -25,14 +25,6 @@
       const musicPlayer = document.querySelector('#musicPlayer');
       const playButton = document.querySelector('#playButton');
       const pauseButton = document.querySelector('#pauseButton');
-      
-      // Listen for the loadedmetadata event on the audio element
-      musicPlayer.addEventListener('loadedmetadata', function() {
-        const context = musicPlayer.components.sound.pool.children[0].source.context;
-        if (context.state === 'suspended') {
-          context.resume();
-        }
-      });
     
       function toggleMusic() {
         if (musicPlayer.paused) {
