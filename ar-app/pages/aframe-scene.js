@@ -1,4 +1,4 @@
-import AFrameScene from '../components/AFrameScene';
+import AFrameScene from '../components/BasicTemplates/Aframe/AFrameScene';
 
 const AFramePage = () => {
   return <AFrameScene />;

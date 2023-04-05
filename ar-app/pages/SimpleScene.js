@@ -1,4 +1,4 @@
-import ThreeScene from '../components/ThreeScene';
+import ThreeScene from '../components/BasicTemplates/Three/ThreeScene';
 
 function SimpleScenePage() {
   return (
