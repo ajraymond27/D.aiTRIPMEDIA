@@ -1,4 +1,4 @@
-import ARQuicklook from '../components/BasicTemplates/ARQuickLook/ARQuicklook';
+import ARQuicklook from '../components/BigSteppers/Crown';
 
 const MyPage = () => {
   return (
