@@ -41,9 +41,20 @@ export default function Home() {
         }}
       >
         <ambientLight color={'white'} intensity={0.2} />
-        <LightBulb position={[0, 3, 0]} />
+        <LightBulb position={[0, 7, 0]} />
         <OrbitControls />
         <Floor position={[0, -1, 0]} />
+        <Text
+          position={[0, 3, 0]}
+          fontSize={2.7}
+          color={"white"}
+          maxWidth={100}
+          lineHeight={1}
+          textAlign={"center"}
+          font="/fonts/helvetiker_regular.typeface.json"
+        >
+          D.ai TRIP MEDIA
+        </Text>
         <Text
           color={'white'}
           position={[0, 1, 0]}
