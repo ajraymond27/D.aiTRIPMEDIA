@@ -12,7 +12,7 @@ const AframeSceneImpl = () => {
   return (
     <Entity>
       <a-scene>
-        <a-sky src={imageSrc}></a-sky>
+        <a-sky src={imageSrc} rotation="0 -100 0"></a-sky>
       </a-scene>
       <input type="text" onChange={handleImageChange} value={imageSrc}/>
     </Entity>
