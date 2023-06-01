@@ -3,8 +3,8 @@ import {Entity} from 'aframe-react';
 import {useState} from 'react';
 
 const AframeSceneImpl = () => {
-  // const [imageSrc, setImageSrc] = useState('https://d13wrvtzk1buxr.cloudfront.net/360_images/chief.jpg');
-  const [imageSrc, setImageSrc] = useState('chief.jpg');
+  const [imageSrc, setImageSrc] = useState('https://d13wrvtzk1buxr.cloudfront.net/360_images/chief.jpg');
+  // const [imageSrc, setImageSrc] = useState('chief.jpg');
 
   const handleImageChange = (e) => {
     setImageSrc(e.target.value);
