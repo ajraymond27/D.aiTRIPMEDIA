@@ -1,7 +1,7 @@
 import ChiefsHeadScene from '../components/ChiefsHead/ChiefsHeadScene';
 
-const AFramePage = () => {
+const ChiefsHeadPage = () => {
   return <ChiefsHeadScene />;
 };
 
-export default AFramePage;
+export default ChiefsHeadPage;

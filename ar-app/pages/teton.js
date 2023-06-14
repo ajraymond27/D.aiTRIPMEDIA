@@ -1,7 +1,7 @@
 import TetonScene from '../components/Teton/TetonScene';
 
-const AFramePage = () => {
+const TetonPage = () => {
   return <TetonScene />;
 };
 
-export default AFramePage;
+export default TetonPage;
