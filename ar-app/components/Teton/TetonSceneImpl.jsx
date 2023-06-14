@@ -3,7 +3,7 @@ import {Entity} from 'aframe-react';
 import {useState} from 'react';
 
 const TetonSceneImpl = () => {
-  const [imageSrc, setImageSrc] = useState('https://d13wrvtzk1buxr.cloudfront.net/360_images/teton.jpg');
+  const [imageSrc, setImageSrc] = useState('https://d13wrvtzk1buxr.cloudfront.net/360_images/chief.jpg');
 
   const handleImageChange = (e) => {
     setImageSrc(e.target.value);
