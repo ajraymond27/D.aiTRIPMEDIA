@@ -4,7 +4,7 @@ import Crown from '../components/BigSteppers/Crown';
 const CrownPage = () => {
   return (
     <div>
-      <Crown /> 
+      <Crown />
     </div>
   );
 };

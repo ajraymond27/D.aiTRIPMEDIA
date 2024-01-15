@@ -11,7 +11,7 @@ const Crown = () => {
       </div>
       <audio src="https://d13wrvtzk1buxr.cloudfront.net/usdz/BigSteppers/crown.mp3" controls autoPlay />
     </div>
-  );
+  ); 
 };
 
 export default Crown;

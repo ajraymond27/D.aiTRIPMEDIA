@@ -1,74 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        #begin-experience, #pause-resume {
-            position: absolute;
-            z-index: 1;
-            padding: 1em 2em;
-            font-size: 1.25em;
-            cursor: pointer;
-        }
-        #begin-experience {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        #pause-resume {
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <a-scene>
-        <a-entity id="my-box" geometry="primitive: box" material="color: red" position="0 1 -5" sound="src: url(stound.mp3); loop: true"></a-entity>
-    </a-scene>
-    <button id="begin-experience">Begin Experience</button>
-    <button id="pause-resume">Pause</button>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const beginExperienceButton = document.getElementById('begin-experience');
-            const pauseResumeButton = document.getElementById('pause-resume');
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            const myBox = document.querySelector('#my-box[sound]');
-            myBox.setAttribute('sound', 'audioContext', audioContext);
-
-            myBox.addEventListener('sound-loaded', function () {
-                console.log('Sound loaded successfully.');
-            });
-
-            myBox.addEventListener('error', function (event) {
-                console.error('Error loading sound:', event.detail.message);
-                // Handle error: Show a message to the user or retry loading the sound.
-            });
-
-            beginExperienceButton.addEventListener('click', function () {
-                audioContext.resume().then(() => {
-                    myBox.components.sound.playSound();
-                    beginExperienceButton.style.display = 'none'; // Hide the Begin Experience button after clicking
-                    pauseResumeButton.style.display = 'block'; // Show the Pause/Resume button
-                });
-            });
-
-            pauseResumeButton.addEventListener('click', function () {
-                if (myBox.components.sound.isPlaying) {
-                    myBox.components.sound.pauseSound();
-                    pauseResumeButton.innerText = 'Resume';
-                } else {
-                    myBox.components.sound.playSound();
-                    pauseResumeButton.innerText = 'Pause';
-                }
-            });
-        });
-    </script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Cutting Board</title>
+    <meta name="description" content="DESCRIPTION">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+    <body>
+        <a-scene>
+            <a-text font="exo2bold" value="EXAMPLE TEXTS" width="5" position="-.75 1.75 -1" rotation="0 0 0" color="#000"></a-text>
+        </a-scene>
+    </body>
 </html>

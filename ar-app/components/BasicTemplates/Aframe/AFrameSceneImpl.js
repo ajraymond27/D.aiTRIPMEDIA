@@ -3,7 +3,7 @@ import {Entity} from 'aframe-react';
 import {useState} from 'react';
 
 const AframeSceneImpl = () => {
-  const [imageSrc, setImageSrc] = useState('/test.png');
+  const [imageSrc, setImageSrc] = useState('/grateful_dead.png');
 
   const handleImageChange = (e) => {
     setImageSrc(e.target.value);
