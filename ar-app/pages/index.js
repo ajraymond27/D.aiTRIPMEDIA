@@ -37,13 +37,13 @@ export default function Home() {
         shadows={true}
         className={css.canvas}
         camera={{
-          position: [0, 0, 10],
+          position: [0, 0, 20],
         }}
       >
         <ambientLight color={'white'} intensity={0.2} />
         <LightBulb position={[0, 7, 0]} />
         <OrbitControls />
-        <Floor position={[0, -1, 0]} />
+        <Floor position={[0, -2.7, 0]} />
         <Text
           position={[0, 3, 0]}
           fontSize={2.7}
@@ -58,7 +58,7 @@ export default function Home() {
         <Text
           color={'white'}
           position={[0, 1, 0]}
-          fontSize={0.5}
+          fontSize={1}
           maxWidth={300}
           lineHeight={1}
           textAlign={'center'}
