@@ -53,17 +53,7 @@ export default function Home() {
           textAlign={"center"}
           font="/fonts/helvetiker_regular.typeface.json"
         >
-          D.ai TRIP MEDIA
-        </Text>
-        <Text
-          color={'white'}
-          position={[0, 1, 0]}
-          fontSize={0.5}
-          maxWidth={300}
-          lineHeight={1}
-          textAlign={'center'}
-        >
-          {`${countdown.days} Dai ${countdown.hours} HOURS ${countdown.minutes} MINS ${countdown.seconds} SECS`}
+          Dai TRIP
         </Text>
       </Canvas>
     </div>
