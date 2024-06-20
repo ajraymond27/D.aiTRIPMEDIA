@@ -10,7 +10,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {isMobile ? <MobileNavbar /> : <Navbar />}
+      <Navbar />
+      {/* {isMobile ? <MobileNavbar /> : <Navbar />} */}
       <Component {...pageProps} />
     </>
   );
