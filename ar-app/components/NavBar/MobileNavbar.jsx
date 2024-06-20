@@ -1,7 +1,7 @@
 // components/MobileNavbar.jsx
 import React, { useState } from 'react';
 import Link from 'next/link';
-import styles from '../../styles/MobileNavbar.module.css';
+import styles from './MobileNavbar.module.css';
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
