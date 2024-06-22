@@ -1,49 +1,36 @@
 /* styles/Navbar.module.css */
-
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: white;
-  box-shadow: 0 4px 2px -2px gray;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logoImage {
-  height: 27px; /* Adjust based on your logo's dimensions */
-}
-
-.navLinks {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.navLinks a {
-  text-decoration: none;
-  color: black;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: 'Oswald', sans-serif; /* Replace with your desired font family */
-}
-
-.navLinks a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
   }
-
+  
+  .logo {
+    font-family: 'YourCustomFont', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
   .navLinks {
-    flex-direction: column;
-    gap: 0.5rem;
+    display: flex;
+    gap: 20px;
   }
-}
+  
+  .navLinks a {
+    text-decoration: none;
+    color: black;
+    font-family: 'YourCustomFont', sans-serif;
+    font-size: 18px;
+  }
+  
+  .navLinks a:hover {
+    text-decoration: underline;
+  }
+  
