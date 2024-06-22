@@ -1,45 +1,44 @@
 /* styles/MobileNavbar.module.css */
 .mobileNavbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: white;
-    position: relative;
-  }
-  
-  .logo {
-    font-family: 'YourCustomFont', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .menuIcon {
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .navLinks {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .navLinks a {
-    text-decoration: none;
-    color: black;
-    font-family: 'YourCustomFont', sans-serif;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .navLinks a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  position: relative;
+}
+
+.logo {
+  font-family: 'YourCustomFont', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menuIcon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navLinks {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: black;
+  font-family: 'YourCustomFont', sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.navLinks a:hover {
+  text-decoration: underline;
+}

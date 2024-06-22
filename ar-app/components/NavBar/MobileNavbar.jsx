@@ -1,7 +1,7 @@
 // components/MobileNavbar.jsx
 import React, { useState } from 'react';
 import Link from 'next/link';
-import styles from '../../styles/MobileNavbar.module.css';
+import styles from '../../styles//MobileNavbar.module.css';
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +12,10 @@ const MobileNavbar = () => {
 
   return (
     <nav className={styles.mobileNavbar}>
-      <div className={styles.logo}>DAI TRIP</div>
-      <div className={styles.menuIcon} onClick={toggleMenu}>
+        <Link href="/">
+          <img src="/logo.png" alt="DAI TRIP Logo" className={styles.logoImage} />
+        </Link>
+        <div className={styles.menuIcon} onClick={toggleMenu}>
         {isOpen ? 'X' : '☰'}
       </div>
       {isOpen && (
