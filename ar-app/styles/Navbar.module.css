@@ -51,6 +51,6 @@
   .navLinks {
     flex-direction: column;
     gap: 0.5rem;
-    align-items: center; /* Center align items on smaller screens */
+    align-items: center; 
   }
 }

@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Navbar />
       {isMobile ? <MobileNavbar /> : <Navbar />}
       <Component {...pageProps} />
     </>

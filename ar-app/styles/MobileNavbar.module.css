@@ -1,21 +1,29 @@
 /* styles/MobileNavbar.module.css */
 .mobileNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure this z-index is higher than the A-Frame canvas */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 1rem 2rem;
   background-color: white;
-  position: relative;
 }
 
 .logo {
-  font-family: 'YourCustomFont', sans-serif;
-  font-size: 24px;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 35px; /* Adjust based on your logo's dimensions */
 }
 
 .menuIcon {
-  font-size: 24px;
+  font-size: 35px;
+  color: black;
   cursor: pointer;
 }
 
@@ -34,11 +42,7 @@
 .navLinks a {
   text-decoration: none;
   color: black;
-  font-family: 'YourCustomFont', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 18px;
   margin-bottom: 10px;
-}
-
-.navLinks a:hover {
-  text-decoration: underline;
 }
