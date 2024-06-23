@@ -20,6 +20,10 @@ a {
   color: black;
 }
 
+.a-dialog-button {
+  background-color: black;
+}
+
 .a-dialog-allow-button {
   background-color: black;
   font-family: 'Oswald', sans-serif;
@@ -31,12 +35,6 @@ a {
   font-family: 'Oswald', sans-serif;
   color: white;
 }
-
-.a-dialog-ok-button {
-   background-color: black;
-   font-family: 'Oswald', sans-serif;
-   color: white
- }
 
 @media (prefers-color-scheme: dark) {
   html {
