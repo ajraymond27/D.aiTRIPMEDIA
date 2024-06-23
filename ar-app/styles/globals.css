@@ -45,3 +45,23 @@ a {
     background: black;
   }
 }
+
+.a-dialog-text {
+  color: black;
+}
+
+.a-dialog-button {
+  background-color: black;
+}
+
+.a-dialog-allow-button {
+  background-color: black;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+
+.a-dialog-deny-button {
+  background-color: black;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
