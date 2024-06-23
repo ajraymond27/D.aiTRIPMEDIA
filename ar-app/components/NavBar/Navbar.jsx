@@ -6,7 +6,7 @@ import styles from '../../styles/Navbar.module.css';
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-        <Link href="/">
+        <Link href="https://www.daitripmedia.com/">
           <img src="/logo.png" alt="DAI TRIP Logo" className={styles.logoImage} />
         </Link>
         <div className={styles.navLinks}>
