@@ -48,13 +48,13 @@ a {
   color: black;
 }
 
-.a-dialog-allow-button {
+button.a-dialog-allow-button {
   background-color: #000;
   font-family: 'Oswald', sans-serif;
   color: white;
 }
 
-.a-dialog-deny-button {
+button.a-dialog-deny-button {
   background-color: #000;
   font-family: 'Oswald', sans-serif;
   color: white;
