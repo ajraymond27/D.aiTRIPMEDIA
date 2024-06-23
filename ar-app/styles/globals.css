@@ -16,6 +16,10 @@ a {
 
 /* Aframe device-orientation-permission-ui styles */
 
+.a-dialog-text {
+  color: black;
+}
+
 .a-dialog-allow-button {
   background-color: black;
   font-family: 'Oswald', sans-serif;
