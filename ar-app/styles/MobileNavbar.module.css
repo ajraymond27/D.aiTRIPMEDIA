@@ -18,11 +18,11 @@
 }
 
 .logoImage {
-  height: 35px; /* Adjust based on your logo's dimensions */
+  height: 30px; /* Adjust based on your logo's dimensions */
 }
 
 .menuIcon {
-  font-size: 35px;
+  font-size: 30px;
   color: black;
   cursor: pointer;
 }

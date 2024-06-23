@@ -16,7 +16,7 @@ const MobileNavbar = () => {
           <img src="/logo.png" alt="DAI TRIP Logo" className={styles.logoImage} />
         </Link>
         <div className={styles.menuIcon} onClick={toggleMenu}>
-        {isOpen ? 'X' : '☰'}
+        {isOpen ? 'x' : '☰'}
       </div>
       {isOpen && (
         <div className={styles.navLinks}>
