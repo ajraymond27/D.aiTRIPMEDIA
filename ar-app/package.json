@@ -12,7 +12,6 @@
     "@fontsource/oswald": "^5.0.20",
     "@react-three/drei": "^9.46.0",
     "@react-three/fiber": "^8.9.1",
-    "@vercel/speed-insights": "^1.0.12",
     "aframe": "^1.4.1",
     "aframe-react": "^4.4.0",
     "eslint": "8.28.0",
