@@ -3,7 +3,7 @@ import {Entity} from 'aframe-react';
 import {useState} from 'react';
 
 const MushroomCarharttSceneImpl = () => {
-  const [imageSrc, setImageSrc] = useState('https://d13wrvtzk1buxr.cloudfront.net/360_images/MushroomCarhartt.jpg');
+  const [imageSrc, setImageSrc] = useState('https://d13wrvtzk1buxr.cloudfront.net/360_images/mushroom.jpg');
 
   const handleImageChange = (e) => {
     setImageSrc(e.target.value);
