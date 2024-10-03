@@ -12,8 +12,7 @@ const GratefulSceneImpl = () => {
   return (
     <Entity>
       <a-scene>
-        <a-sky src={imageSrc} rotation="0 -100 0" crossorigin="anonymous"></a-sky>
-        <a-text font="Oswald" value="GRATEFUL DAI" width="1.5" position="0.1 2 -2" rotation="0 -30 0"></a-text>
+        <a-sky src={imageSrc} rotation="0 -30 0" crossorigin="anonymous"></a-sky>
       </a-scene>
       <input type="text" onChange={handleImageChange} value={imageSrc}/>
     </Entity>
