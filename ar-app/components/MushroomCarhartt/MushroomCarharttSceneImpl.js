@@ -12,7 +12,7 @@ const MushroomCarharttSceneImpl = () => {
   return (
     <Entity>
       <a-scene>
-        <a-sky src={imageSrc} rotation="0 -75 0" crossorigin="anonymous"></a-sky>
+        <a-sky src={imageSrc} rotation="0 -60 0" crossorigin="anonymous"></a-sky>
       </a-scene>
       <input type="text" onChange={handleImageChange} value={imageSrc}/>
     </Entity>
