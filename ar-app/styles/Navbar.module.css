@@ -8,7 +8,7 @@
   z-index: 1000; /* Ensure this z-index is higher than the A-Frame canvas */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: right;
   padding: 1rem 2rem;
   background-color: white;
 }
@@ -27,7 +27,7 @@
   display: flex;
   gap: 1.5rem;
   flex: 1; /* Take up remaining space */
-  justify-content: center; /* Center the nav links horizontally */
+  justify-content: right; /* Center the nav links horizontally */
 }
 
 .navLinks a {
