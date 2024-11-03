@@ -13,8 +13,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {isMobile ? <MobileNavbar /> : <Navbar />}
-      <Analytics />
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
