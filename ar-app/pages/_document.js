@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* Add the A-Frame script */}
-        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <script async src="path/to/your/script.js"></script>
       </Head>
       <body>
         <Main />

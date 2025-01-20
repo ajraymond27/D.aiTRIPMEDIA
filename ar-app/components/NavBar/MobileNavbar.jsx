@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from '../../styles//MobileNavbar.module.css';
+import Image from 'next/image';
+
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +15,7 @@ const MobileNavbar = () => {
   return (
     <nav className={styles.mobileNavbar}>
         <Link href="https://www.daitripmedia.com/">
-          <img src="/logo.png" alt="DAI TRIP Logo" className={styles.logoImage} />
+          <Image src="/logo.png" alt="DAI TRIP Logo" className={styles.logoImage} />
         </Link>
         <div className={styles.menuIcon} onClick={toggleMenu}>
         {isOpen ? 'x' : '☰'}

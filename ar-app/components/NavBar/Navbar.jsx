@@ -2,12 +2,13 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../../styles/Navbar.module.css';
+import Image from 'next/image';
 
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
         <Link href="https://www.daitripmedia.com/">
-          <img src="/logo.png" alt="DAI TRIP Logo" className={styles.logoImage} />
+          <Image src="/logo.png" alt="DAI TRIP Logo" className={styles.logoImage} />
         </Link>
         <div className={styles.navLinks}>
           <a href="https://www.daitripmedia.com/">HOME</a>
