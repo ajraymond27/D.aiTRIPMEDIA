@@ -1,20 +1,29 @@
+import React, { useEffect } from 'react';
 import 'aframe';
 
-const AFrameSceneImpl = () => {
+const MoabImpl = () => {
+  useEffect(() => {
+    // Ensure A-Frame is loaded
+    require('aframe');
+
+    // Add interaction to play video on user interaction
+    const video = document.querySelector('#video');
+    const playVideo = () => {
+      video.play();
+      document.removeEventListener('click', playVideo);
+    };
+    document.addEventListener('click', playVideo);
+  }, []);
+
   return (
-    <a-scene vr-mode-ui="enabled: false">
+    <a-scene>
       <a-assets>
-        <video id="video" crossOrigin="anonymous" playsInline webkit-playsinline="true" loop>
-          <source src="https://d13wrvtzk1buxr.cloudfront.net/360_images/bow.MP4" type="video/mp4" />
-        </video>
+        <video id="video" autoPlay loop src="/example.mp4" webkit-playsinline playsinline></video>
       </a-assets>
-      <a-videosphere src="#video"></a-videosphere>
-      <a-entity camera>
-        <a-camera look-controls></a-camera>
-      </a-entity>
-      <a-entity video-controls></a-entity>
+
+      <a-videosphere src="#video" rotation="0 -90 0"></a-videosphere>
     </a-scene>
   );
 };
 
-export default AFrameSceneImpl;
+export default MoabImpl;
