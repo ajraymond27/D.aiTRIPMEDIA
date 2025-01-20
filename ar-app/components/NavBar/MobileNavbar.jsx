@@ -15,7 +15,7 @@ const MobileNavbar = () => {
   return (
     <nav className={styles.mobileNavbar}>
         <Link href="https://www.daitripmedia.com/">
-          <Image src="/logo.png" alt="DAI TRIP Logo" className={styles.logoImage} />
+          <Image src="/logo.png" alt="DAI TRIP Logo" className={styles.logoImage} width={120} height={30}/>
         </Link>
         <div className={styles.menuIcon} onClick={toggleMenu}>
         {isOpen ? 'x' : '☰'}
