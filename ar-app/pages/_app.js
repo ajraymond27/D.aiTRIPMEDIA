@@ -3,7 +3,6 @@ import React from 'react';
 import '../styles/globals.css';
 import '@fontsource/oswald'; // Import the Oswald font
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Navbar from '../components/NavBar/Navbar';
 import MobileNavbar from '../components/NavBar/MobileNavbar';
 import { useMediaQuery } from 'react-responsive';
@@ -16,7 +15,6 @@ function MyApp({ Component, pageProps }) {
       {isMobile ? <MobileNavbar /> : <Navbar />}
       <Component {...pageProps} />
       <Analytics />
-      <SpeedInsights/>
     </>
   );
 }
