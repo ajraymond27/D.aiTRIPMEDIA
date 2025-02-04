@@ -3,7 +3,7 @@ import {Entity} from 'aframe-react';
 import {useState} from 'react';
 
 const GratefulSceneImpl = () => {
-  const [imageSrc, setImageSrc] = useState('https://dzca54yadzmkj.cloudfront.net/360_images/grateful.jpg');
+  const [imageSrc, setImageSrc] = useState('https://d13wrvtzk1buxr.cloudfront.net/360_images/grateful.jpg');
 
   const handleImageChange = (e) => {
     setImageSrc(e.target.value);
