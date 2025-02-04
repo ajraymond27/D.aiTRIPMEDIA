@@ -18,7 +18,7 @@ const MoabImpl = () => {
   return (
     <a-scene>
       <a-assets>
-        <video id="video" autoPlay loop src="https://d13wrvtzk1buxr.cloudfront.net/360_images/arches.mp4" webkit-playsinline playsinline></video>
+        <video id="video" autoPlay loop src="https://dzca54yadzmkj.cloudfront.net/360_videos/arches.mp4" webkit-playsinline playsinline></video>
       </a-assets>
 
       <a-videosphere src="#video" rotation="0 -90 0"></a-videosphere>
