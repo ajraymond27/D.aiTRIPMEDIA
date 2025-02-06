@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dancing Bears</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <img id="floorTexture" src="glass.jpg">
+        </a-assets>
+
+        <a-sky src="grateful_dead.png" rotation="0 -90 0"></a-sky>
+        <a-plane src="#floorTexture" rotation="-90 0 0" height="50" width="50" material="shader: standard; transparent: true; opacity: 0.5; metalness: 0; roughness: 0; color: #fff"></a-plane>
+
+        <!-- Front -->
+        <a-entity position="0 1.5 -5">
+          <a-image src="kendrick.png" width="1.5" height="2.5" position="-2 2 0" ></a-image>
+          <a-text font="mozillavr" value="June 30, 2017 Wrigley Field, Chicago, IL" width="1.5" wrap-count="12" position="-2.75 .5 0" rotation="0 0 0"></a-text>
+
+          <a-image src="kendrick.png" width="1.5" height="2.5" position="2 2 0" ></a-image>
+          <a-text font="mozillavr" value="July 1, 2017 Wrigley Field, Chicago, IL" width="1.5" wrap-count="12" position="1.25 .5 0" rotation="0 0 0"></a-text>
+        </a-entity>
+
+        <!-- Right -->
+        <a-entity position="5 1.5 0" rotation="0 -90 0">
+          <a-image src="kendrick.png" width="1.5" height="2.5" position="-2 2 0" ></a-image>
+          <a-text font="mozillavr" value="November 25, 2017 Columbus, OH" width="1.5" wrap-count="12" position="-2.75 .5 0" rotation="0 0 0"></a-text>
+
+          <a-image src="kendrick.png" width="1.5" height="2.5" position="2 2 0" ></a-image>
+          <a-text font="mozillavr" value="June 12, 2019 Ruoff Music Center, Noblesville, IN" width="1.5" wrap-count="12" position="1.25 .5 0" rotation="0 0 0"></a-text>
+        </a-entity>
+
+        <!-- Left -->
+        <a-entity position="-5 1.5 0" rotation="0 90 0">
+          <a-image src="kendrick.png" width="1.5" height="2.5" position="-2 2 0" ></a-image>
+          <a-text font="mozillavr" value="September 17, 2021 Wrigley Field, Chicago, IL" width="1.5" wrap-count="12" position="-2.75 .5 0" rotation="0 0 0"></a-text>
+
+          <a-image src="kendrick.png" width="1.5" height="2.5" position="2 2 0" ></a-image>
+          <a-text font="mozillavr" value="September 18, 2021 Wrigley Field, Chicago, IL" width="1.5" wrap-count="12" position="1.25 .5 0" rotation="0 0 0"></a-text>
+        </a-entity>
+
+        <!-- Back -->
+        <!-- <a-entity position="0 1.5 5" rotation="0 0 0">
+          <a-image src="kendrick.png" width="1.5" height="2.5" position="-3 3.5 0" ></a-image>
+          <a-image src="kendrick.png" width="1.5" height="2.5" position="0 3.5 0" ></a-image>
+          <a-image src="kendrick.png" width="1.5" height="2.5"  position="3 3.5 0" ></a-image>
+        </a-entity>      -->
+
+    </a-scene>
+  </body>
+</html>
