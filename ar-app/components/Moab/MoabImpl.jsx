@@ -18,6 +18,7 @@ const MoabImpl = () => {
   return (
     <a-scene>
       <a-assets>
+        <h1>Moab</h1>
         <video id="video" autoPlay loop src="https://dzca54yadzmkj.cloudfront.net/360_videos/moab.mp4" webkit-playsinline playsinline></video>
       </a-assets>
 
