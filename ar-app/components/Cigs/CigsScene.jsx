@@ -1,8 +1,7 @@
-import React from 'react';
-import CigsSceneImpl from './CigsSceneImpl';
+import dynamic from 'next/dynamic';
 
-const CigsScene = () => {
-  return <CigsSceneImpl />;
-};
+const CigsScene = dynamic(() => import('./CigsSceneImpl'), {
+  ssr: false
+});
 
 export default CigsScene;

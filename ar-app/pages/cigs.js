@@ -1,12 +1,7 @@
-import ThreeScene from '../components/BasicTemplates/Three/ThreeScene';
+import CigsScene from "../components/Cigs/CigsScene"; 
 
-function CigsPage() {
-  return (
-    <div>
-      <h1>Simple Three.js Scene</h1>
-      <ThreeScene />
-    </div>
-  );
-}
+const CigsPage = () => {
+  return <CigsScene />;
+};
 
 export default CigsPage;
