@@ -3,7 +3,7 @@ import { Entity } from 'aframe-react';
 import { useState } from 'react';
 
 const CigsSceneImpl = () => {
-  const [imageSrc, setImageSrc] = useState('saloon.png');
+  const [imageSrc, setImageSrc] = useState('https://dzca54yadzmkj.cloudfront.net/360_images/saloon.png');
 
   const handleImageChange = (e) => {
     setImageSrc(e.target.value);
@@ -17,7 +17,7 @@ const CigsSceneImpl = () => {
 
         {/* 3D Model with Animation */}
         <a-entity
-          gltf-model="./cowboy.glb"
+          gltf-model="https://dzca54yadzmkj.cloudfront.net/3D_models/cowboy.glb"
           animation-mixer="clip: Unsteady Walk; loop: repeat"
           position="0 0 -3"
           scale="1 1 1"
