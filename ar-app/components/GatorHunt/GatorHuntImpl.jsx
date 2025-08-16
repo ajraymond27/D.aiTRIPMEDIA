@@ -78,7 +78,7 @@ export default function GatorHuntImpl() {
     // Textures
     const loader = new THREE.TextureLoader();
     const gatorTex = loader.load("https://dzca54yadzmkj.cloudfront.net/gator-hunt/gator_idle.png");
-    const gatorHitTex = loader.load("https://dzca54yadzmkj.cloudfront.net/gator-hunt/gator_hit.png");
+    const gatorHitTex = loader.load("/gator_hit.png");
     const bgTex = loader.load("https://dzca54yadzmkj.cloudfront.net/gator-hunt/background.png");
 
     // Background
