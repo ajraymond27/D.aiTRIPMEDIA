@@ -77,9 +77,9 @@ export default function GatorHuntImpl() {
 
     // Textures
     const loader = new THREE.TextureLoader();
-    const gatorTex = loader.load("/gator-hunt/gator_idle.png");
-    const gatorHitTex = loader.load("/gator-hunt/gator_hit.png");
-    const bgTex = loader.load("/gator-hunt/background.png");
+    const gatorTex = loader.load("https://dzca54yadzmkj.cloudfront.net//gator-hunt/gator_idle.png");
+    const gatorHitTex = loader.load("/https://dzca54yadzmkj.cloudfront.net/gator-hunt/gator_hit.png");
+    const bgTex = loader.load("https://dzca54yadzmkj.cloudfront.net//gator-hunt/background.png");
 
     // Background
     const bgMat = new THREE.MeshBasicMaterial({ map: bgTex });
@@ -224,8 +224,8 @@ export default function GatorHuntImpl() {
 
     // Cleanup
     return () => {
-      if (spawnInterval) clearInterval(spawnInterval);
-      if (timerInterval) clearInterval(timerInterval);
+      if (spawnInterval) clearTimeout(spawnInterval);
+      if (timerInterval) clearTimeout(timerInterval);
       cancelAnimationFrame(rafRef.current);
       renderer.domElement.removeEventListener("pointerdown", onPointerDown);
       activeGators.forEach((g) => scene.remove(g));
